@@ -28,7 +28,7 @@ abstract class Shape implements Cloneable{
     }
     @Override
     public String toString() {
-        return "";
+        return "Неизвестная фигура";
     }
 
     public Object clone() {
