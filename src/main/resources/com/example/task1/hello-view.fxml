@@ -34,9 +34,9 @@
                </HBox>
             </children>
          </VBox>
-         <VBox prefHeight="75.0" prefWidth="83.0">
+         <VBox prefHeight="101.0" prefWidth="108.0">
             <children>
-               <ListView fx:id="listview" prefHeight="95.0" prefWidth="83.0" />
+               <ListView fx:id="listview" prefHeight="76.0" prefWidth="103.0" />
                <Button mnemonicParsing="false" onAction="#CancelDraw" prefHeight="25.0" prefWidth="107.0" text="Отмена" />
             </children>
          </VBox>
