@@ -9,6 +9,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
+import javafx.util.Callback;
 
 import java.net.URL;
 import java.util.*;
@@ -42,10 +43,15 @@ public class HelloController implements Initializable {
 
         content = FXCollections.observableArrayList (ellipse,angle,rectangle,triangle);
 
+        listview.setCellFactory(new Callback<ListView<Shape>,
+                ListCell<Shape>>() {
+            @Override
+            public ListCell<Shape> call(ListView<Shape> list) {
+                return new ShapeCell();}
+            }
+        );
         listview.setItems(content);
-
         listview.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-
     }
 
     @FXML
